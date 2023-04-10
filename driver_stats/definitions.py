@@ -1,7 +1,15 @@
 # Importing dependencies
 from google.protobuf.duration_pb2 import Duration
-from feast import Entity, Feature, FeatureView, FileSource, ValueType
+from feast import (
+    Entity, 
+    Feature, 
+    FeatureView, 
+    FileSource, 
+    ValueType, 
+    Field
+)
 import os
+from feast.types import Float32, Int64
 
 # Getting the current working directory
 dir = os.getcwd()
@@ -25,8 +33,8 @@ driver_stats_fv1 = FeatureView(
     name="driver_stats_fv1",
     ttl=Duration(seconds=86400 * 2),
     entities=["driver_id"],
-    features=[
-        Feature(name="conv_rate", dtype=ValueType.FLOAT)    
+    schema=[
+        Field(name="conv_rate", dtype=ValueType.FLOAT)    
         ],    
     batch_source=file_source1
 )
@@ -44,9 +52,9 @@ driver_stats_fv2 = FeatureView(
     name="driver_stats_fv2",
     ttl=Duration(seconds=86400 * 2),
     entities=["driver_id"],
-    features=[
-        Feature(name="acc_rate", dtype=ValueType.FLOAT),
-        Feature(name="avg_daily_trips", dtype=ValueType.INT64)        
+    schema=[
+        Field(name="acc_rate", dtype=ValueType.FLOAT),
+        Field(name="avg_daily_trips", dtype=ValueType.INT64)        
         ],    
     batch_source=file_source2
 )
