@@ -1,0 +1,27 @@
+
+E
+%
+__dummy"
+__dummy_idJdriver_stats
+¿ŸÀ’¸İÃÎ¿ŸÀ’¸İÃÎ
+\
+<
+	driver_idThe ID of the driver"	driver_idJdriver_stats
+¿ŸÀ’¸İÃÎ¿ŸÀ’¸İÃÎ1"$271cabe6-9d05-4ca9-90db-d4fac71ca87e*¿ŸÀ’¸İÃÎ2ñ
+Ğ
+driver_stats_fv1driver_stats	driver_id"
+	conv_rate2€Æ
+:‹event_timestamp*createdZ\ZC:\Users\tigra\Desktop\git\feast_web_app_toy_data\driver_stats\data\driver_stats_1.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢ZC:\Users\tigra\Desktop\git\feast_web_app_toy_data\driver_stats\data\driver_stats_1.parquet@
+¿ŸÀ’¸İÃÎ¿ŸÀ’¸İÃÎ2…
+ä
+driver_stats_fv2driver_stats	driver_id"
+acc_rate"
+avg_daily_trips2€Æ
+:‹event_timestamp*createdZ\ZC:\Users\tigra\Desktop\git\feast_web_app_toy_data\driver_stats\data\driver_stats_2.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢ZC:\Users\tigra\Desktop\git\feast_web_app_toy_data\driver_stats\data\driver_stats_2.parquet@
+¿ŸÀ’¸İÃÎ¿ŸÀ’¸İÃÎRÎ
+¤
+,feast.infra.online_stores.sqlite.SqliteTable"t
+SC:\Users\tigra\Desktop\git\feast_web_app_toy_data\driver_stats\data\online_store.dbdriver_stats_driver_stats_fv1
+¤
+,feast.infra.online_stores.sqlite.SqliteTable"t
+SC:\Users\tigra\Desktop\git\feast_web_app_toy_data\driver_stats\data\online_store.dbdriver_stats_driver_stats_fv2bæevent_timestamp*createdZ\ZC:\Users\tigra\Desktop\git\feast_web_app_toy_data\driver_stats\data\driver_stats_2.parquet¢ZC:\Users\tigra\Desktop\git\feast_web_app_toy_data\driver_stats\data\driver_stats_2.parquetªdriver_statsbæevent_timestamp*createdZ\ZC:\Users\tigra\Desktop\git\feast_web_app_toy_data\driver_stats\data\driver_stats_1.parquet¢ZC:\Users\tigra\Desktop\git\feast_web_app_toy_data\driver_stats\data\driver_stats_1.parquetªdriver_stats
