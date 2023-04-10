@@ -4,8 +4,7 @@ from feast import (
     Entity, 
     Feature, 
     FeatureView, 
-    FileSource, 
-    ValueType, 
+    FileSource,  
     Field
 )
 import os
@@ -34,9 +33,9 @@ driver_stats_fv1 = FeatureView(
     ttl=Duration(seconds=86400 * 2),
     entities=["driver_id"],
     schema=[
-        Field(name="conv_rate", dtype=ValueType.FLOAT)    
+        Field(name="conv_rate", dtype=Float32)    
         ],    
-    batch_source=file_source1
+    source=file_source1
 )
 
 
@@ -53,8 +52,8 @@ driver_stats_fv2 = FeatureView(
     ttl=Duration(seconds=86400 * 2),
     entities=["driver_id"],
     schema=[
-        Field(name="acc_rate", dtype=ValueType.FLOAT),
-        Field(name="avg_daily_trips", dtype=ValueType.INT64)        
+        Field(name="acc_rate", dtype=Float32),
+        Field(name="avg_daily_trips", dtype=Int64)        
         ],    
-    batch_source=file_source2
+    source=file_source2
 )
