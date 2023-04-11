@@ -15,12 +15,13 @@ dir = os.getcwd()
 
 # Declaring an entity for the dataset
 driver = Entity(
-    name="driver_id", 
+    name="driver", 
     join_keys=["driver_id"]
     )
 
 # Declaring the source for the first feature file
 file_source1 = FileSource(
+    name="driver_stats_source1",
     path=os.path.join(dir, "data", "driver_stats_1.parquet"),
     event_timestamp_column="event_timestamp",
     created_timestamp_column="created"
@@ -30,7 +31,7 @@ file_source1 = FileSource(
 driver_stats_fv1 = FeatureView(
     name="driver_stats_fv1",
     ttl=Duration(seconds=86400 * 2),
-    entities=["driver_id"],
+    entities=[driver],
     schema=[
         Field(name="conv_rate", dtype=Float32)    
         ],    
@@ -40,6 +41,7 @@ driver_stats_fv1 = FeatureView(
 
 # Declaring the source for the second feature file
 file_source2 = FileSource(
+    name="driver_stats_source2",
     path=os.path.join(dir, "data", "driver_stats_2.parquet"),
     event_timestamp_column="event_timestamp",
     created_timestamp_column="created"
@@ -49,7 +51,7 @@ file_source2 = FileSource(
 driver_stats_fv2 = FeatureView(
     name="driver_stats_fv2",
     ttl=Duration(seconds=86400 * 2),
-    entities=["driver_id"],
+    entities=[driver],
     schema=[
         Field(name="acc_rate", dtype=Float32),
         Field(name="avg_daily_trips", dtype=Int64)        
