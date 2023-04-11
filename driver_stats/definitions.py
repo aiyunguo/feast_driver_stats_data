@@ -24,7 +24,7 @@ driver = Entity(
 file_source1 = FileSource(
     name="driver_stats_source1",
     path=os.path.join(dir, "data", "driver_stats_1.parquet"),
-    event_timestamp_column="event_timestamp",
+    timestamp_field="event_timestamp",
     created_timestamp_column="created"
 )
 
@@ -44,7 +44,7 @@ driver_stats_fv1 = FeatureView(
 file_source2 = FileSource(
     name="driver_stats_source2",
     path=os.path.join(dir, "data", "driver_stats_2.parquet"),
-    event_timestamp_column="event_timestamp",
+    timestamp_field="event_timestamp",
     created_timestamp_column="created"
 )
 
