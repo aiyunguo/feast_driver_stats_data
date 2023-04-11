@@ -16,8 +16,7 @@ dir = os.getcwd()
 # Declaring an entity for the dataset
 driver = Entity(
     name="driver_id", 
-    value_type=ValueType.INT64, 
-    description="The ID of the driver"
+    join_keys=["driver_id"]
     )
 
 # Declaring the source for the first feature file
