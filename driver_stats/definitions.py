@@ -1,5 +1,6 @@
 # Importing dependencies
-from google.protobuf.duration_pb2 import Duration
+from datetime import timedelta
+import pandas as pd
 from feast import (
     Entity, 
     Feature, 
@@ -30,7 +31,7 @@ file_source1 = FileSource(
 # Defining the features for the first feature view
 driver_stats_fv1 = FeatureView(
     name="driver_stats_fv1",
-    ttl=Duration(seconds=86400 * 2),
+    ttl=timedelta(days=2),
     entities=[driver],
     schema=[
         Field(name="conv_rate", dtype=Float32)    
@@ -50,7 +51,7 @@ file_source2 = FileSource(
 # Defining the features for the second feature view
 driver_stats_fv2 = FeatureView(
     name="driver_stats_fv2",
-    ttl=Duration(seconds=86400 * 2),
+    ttl=timedelta(days=2),
     entities=[driver],
     schema=[
         Field(name="acc_rate", dtype=Float32),
